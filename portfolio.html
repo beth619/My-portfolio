@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="width=device-width, inital-scale=1.0">
+    <title>A personal website</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header class="header">
+        <nav class=navbar>
+        
+            <div class="div-header">
+                <a href="Home.html" class="active">  Home</a>
+                <a href="About.html" class="about">  About </a>
+                <a href="portfolio.html" class="portfolio"> portfolio</a>
+                <a href="Services.html" class="services"> Services</a>
+                <a href="contact.html" class="contact">  contact</a>
+            </div>
+        </nav>    
+        </header>
+<div class="div-class">
+    <div class="div-image1">
+        <img src="images/photo_6_2025-01-01_15-40-33.jpg"  class="imageNine">
+        
+        </div>
+        <div class="div-image2">
+            <img src="images/photo_5_2025-01-01_15-40-33.jpg"  class="imageTen">
+            </div>
+            <div class="div-image3">
+                <img src="images/photo_3_2025-01-01_15-40-33.jpg"  class="imageEleven">
+            </div>
+            <div class="div-image4">
+                        <img src="images/photo_2_2025-01-01_15-40-33.jpg"  class="imageThirteen">
+                        </div>
+                        <div class="div-image5">
+                            <img src="images/photo_1_2025-01-01_15-40-33.jpg"  class="imageFourteen">
+                            
+   </div>
+   <div class="div-image6">
+    <img src="images/photo_13_2025-01-01_15-40-33.jpg" class="imageone">
+</div>
+<div class="div-image7">
+<img src="images/photo_12_2025-01-01_15-40-33.jpg"  class="imagetwo">
+
+</div>
+
+<div class="div-image8">
+    <img src="images/photo_2025-01-01_10-59-06.jpg"  class="imagethree">
+
+</div>
+<div class="div-image9">
+    <img src="images/photo_11_2025-01-01_15-40-33.jpg"  class="imagethree">
+    </div>
+    <div class="div-image10">
+        <img src="images/photo_10_2025-01-01_15-40-33.jpg"  class="imagefour">
+        </div>
+        <div class="div-image11">
+                <img src="images/photo_8_2025-01-01_15-40-33.jpg"  class="imagesix">
+            </div>
+            <div class="div-image12">
+                        <img src="images/photo_7_2025-01-01_15-40-33.jpg"  class="imageEight">
+                      </div>               
+</div>
+
+
+Verify
+Run
+Copy code
+<script>
+    // Select all images in the div-class
+    const images = document.querySelectorAll('.div-class img');
+    const modal = document.createElement('div'); // Create a modal element
+    const modalImg = document.createElement('img'); // Create an image element for the modal
+    const closeBtn = document.createElement('span'); // Create a close button
+
+    // Set up the modal styles
+    modal.classList.add('modal');
+    closeBtn.classList.add('close');
+    closeBtn.innerHTML = '&times;'; // Close button symbol
+    modal.appendChild(closeBtn); // Add close button to modal
+    modal.appendChild(modalImg); // Add image to modal
+    document.body.appendChild(modal); // Add modal to body
+
+    // Add click event listener to each image
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            modal.style.display = 'flex'; // Show the modal
+            modalImg.src = this.src; // Set the modal image source to the clicked image
+        });
+    });
+
+    // Close the modal when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none'; // Hide the modal
+    });
+
+    // Close the modal when clicking outside the image
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none'; // Hide the modal
+        }
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+body{
+    background-color:white;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5); 
+}
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding-bottom:150px;
+    background:transparent;
+    display:flex;
+    justify-content:right;
+    align-items:center;
+    z-index:100;
+
+}
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    
+    justify-content: center; /* Center the navbar items */
+}
+.div-header{
+    display: flex; /* Use flexbox for the header links */
+    gap: 50px;
+    padding-top:140px;
+    padding-right:150px;
+    
+}
+.navbar a{
+font-size:65px;
+color:black;
+text-decoration:none;
+font-weight:500;
+margin-left:30px;
+transition:.2s;
+
+border-radius:3px;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:rgba(121, 121, 10, 0.897);
+}
+.main-div{
+   
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:0;
+    padding:0;
+}
+.images-div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin:20px 0;
+}
+.image-div,.image-div2{
+    margin:50px;
+}
+.image{
+    width:1000px;
+    height:auto;
+
+}
+.image2{
+    width:1200px;
+}
+.text-div{
+    font-size:40px;
+}
+
